@@ -1,6 +1,9 @@
 import { useRef, useState, useEffect } from 'react';
 import { Container } from "react-bootstrap";
 import Popup from '../lib/components/Popup';
+import { Helmet } from 'react-helmet'
+
+const TITLE = 'Best Article on Alma Memes';
 
 export default function Article() {
 
@@ -34,6 +37,9 @@ export default function Article() {
 
     return (
         <>
+            <Helmet>
+                <title>{TITLE}</title>
+            </Helmet>
             <div ref={pageHeaderRef} className={isHeaderFixed ? headerClass + " fixed-top" : headerClass}>
                 <Container>
                     <div className="d-flex align-items-center py-2">
